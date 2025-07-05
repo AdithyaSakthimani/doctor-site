@@ -121,7 +121,7 @@ const TherapistWebsite = () => {
     },
     {
       question: "What should I expect in the first session?",
-      answer: "The first session focuses on understanding your concerns, goals, and background. We'll discuss your therapy expectations and create a personalized treatment plan together."
+      answer: "The first session focuses on understanding your concerns, goals, and background. We&apos;ll discuss your therapy expectations and create a personalized treatment plan together."
     }
   ];
 
