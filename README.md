@@ -1,5 +1,4 @@
 
-```
 # 📖 Quotes Carousel Component
 
 A visually engaging **React** component that displays inspirational mental-health-related quotes in a carousel format. Supports **auto-play**, **manual navigation**, and is styled using **Tailwind CSS** with iconography from `lucide-react`.
