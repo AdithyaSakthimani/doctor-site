@@ -1,0 +1,139 @@
+/* Book Button Styling */
+.book-button {
+  z-index: 50;
+  margin-top: auto !important;
+  margin-bottom: 2rem;
+}
+
+/* Image Styling */
+.my-service-img {
+  border-radius: 50%;
+  width: 90%;
+  max-width: 500px;
+  height: 250px;
+  margin: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Service Section */
+.services {
+  height: 110vh;
+}
+
+.group {
+  height: 600px;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Service Card Text */
+.group .p-8 {
+  padding: 1rem;
+  max-height: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.group h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.group p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Large Desktop (≤ 1280px) */
+@media screen and (max-width: 1280px) {
+  .group {
+    height: 550px;
+  }
+
+  .my-service-img {
+    height: 320px;
+  }
+}
+
+/* Laptop (≤ 1024px) */
+@media screen and (max-width: 1024px) {
+  .group {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .my-service-img {
+    height: 280px;
+  }
+
+  .services {
+    height: auto;
+  }
+
+  .group .p-8 {
+    max-height: none;
+  }
+}
+
+/* Tablet (≤ 768px) */
+@media screen and (max-width: 768px) {
+  .group {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .my-service-img {
+    height: 260px;
+  }
+}
+
+/* Mobile (≤ 640px) */
+@media screen and (max-width: 640px) {
+  .group {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .my-service-img {
+    height: 300px;
+    padding-bottom: 1rem;
+  }
+
+  .group .p-8 {
+    padding: 0.75rem;
+  }
+}
+
+/* Session Fees */
+.ses-button {
+  margin-left: 1rem !important;
+}
+
+.ses-hed {
+  display: flex;
+  justify-content: center;
+}
+
+.my-txt {
+  text-align: left;
+}
+
+.my-cost-box {
+  width: 90% !important;
+}
+
+.area-hed {
+  padding-bottom: 1rem;
+}

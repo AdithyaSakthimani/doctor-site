@@ -1,0 +1,14 @@
+.navbar-size{
+    height:auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.my-logo{
+    width: 80px;
+    height: 80px;
+}
+.navbar{
+    z-index: 1000;
+}
