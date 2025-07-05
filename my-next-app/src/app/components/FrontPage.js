@@ -314,183 +314,179 @@ const TherapistWebsite = () => {
       </section>
       </SectionWrapper>
       {/* Contact Section */}
-      <SectionWrapper>
-      <section id="contact" className="py-20 bg-orange-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-            <p className="text-xl text-gray-600">Ready to take the first step? Let's connect.</p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-full">
-                      <Phone className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Phone</p>
-                      <p className="text-gray-600">(323) 555-0192</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-full">
-                      <Mail className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Email</p>
-                      <p className="text-gray-600">serena@blakepsychology.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-blue-100 p-3 rounded-full">
-                      <MapPin className="w-5 h-5 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600">1287 Maplewood Drive<br />Los Angeles, CA 90026</p>
-                    </div>
-                  </div>
-                </div>
+      <section id="contact" className="py-20 bg-orange-50"> 
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+      <p className="text-xl text-gray-600">Ready to take the first step? Let's connect.</p>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-12">
+      {/* Contact Info */}
+      <div className="space-y-8">
+        <div className="bg-white rounded-xl p-6 shadow-lg">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+          <div className="space-y-4">
+            <div className="flex items-center space-x-4">
+              <div className="bg-blue-100 p-3 rounded-full">
+                <Phone className="w-5 h-5 text-blue-600" />
               </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Office Hours</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Clock className="w-5 h-5 text-gray-400" />
-                    <div>
-                      <p className="font-semibold text-gray-900">In-person</p>
-                      <p className="text-gray-600">Tue & Thu, 10 AM–6 PM</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Calendar className="w-5 h-5 text-gray-400" />
-                    <div>
-                      <p className="font-semibold text-gray-900">Virtual (Zoom)</p>
-                      <p className="text-gray-600">Mon, Wed & Fri, 1 PM–5 PM</p>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <p className="font-semibold text-gray-900">Phone</p>
+                <p className="text-gray-600">(323) 555-0192</p>
               </div>
             </div>
-            
-            {/* Contact Form */}
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
-              
-              {isSubmitted ? (
-                <div className="text-center py-8">
-                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h4>
-                  <p className="text-gray-600">Thank you for reaching out. I'll get back to you within 24 hours.</p>
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
-                    <input
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                        formErrors.name ? 'border-red-500' : 'border-gray-300'
-                      }`}
-                      placeholder="Your full name"
-                    />
-                    {formErrors.name && <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>}
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Phone *</label>
-                    <input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                        formErrors.phone ? 'border-red-500' : 'border-gray-300'
-                      }`}
-                      placeholder="Your phone number"
-                    />
-                    {formErrors.phone && <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>}
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
-                    <input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                        formErrors.email ? 'border-red-500' : 'border-gray-300'
-                      }`}
-                      placeholder="your.email@example.com"
-                    />
-                    {formErrors.email && <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>}
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">What brings you here? *</label>
-                    <textarea
-                      value={formData.message}
-                      onChange={(e) => handleInputChange('message', e.target.value)}
-                      rows={4}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                        formErrors.message ? 'border-red-500' : 'border-gray-300'
-                      }`}
-                      placeholder="Tell me a bit about what you're looking for support with..."
-                    />
-                    {formErrors.message && <p className="text-red-500 text-sm mt-1">{formErrors.message}</p>}
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">Preferred time to reach you *</label>
-                    <input
-                      type="text"
-                      value={formData.preferredTime}
-                      onChange={(e) => handleInputChange('preferredTime', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                        formErrors.preferredTime ? 'border-red-500' : 'border-gray-300'
-                      }`}
-                      placeholder="e.g., Weekday mornings, Tuesday evenings, etc."
-                    />
-                    {formErrors.preferredTime && <p className="text-red-500 text-sm mt-1">{formErrors.preferredTime}</p>}
-                  </div>
-                  
-                  <div>
-                    <label className="flex items-center space-x-3">
-                      <input
-                        type="checkbox"
-                        checked={formData.agreeToContact}
-                        onChange={(e) => handleInputChange('agreeToContact', e.target.checked)}
-                        className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                      />
-                      <span className="text-sm text-gray-700">I agree to be contacted *</span>
-                    </label>
-                    {formErrors.agreeToContact && <p className="text-red-500 text-sm mt-1">{formErrors.agreeToContact}</p>}
-                  </div>
-                  
-                  <button
-                    type="button"
-                    onClick={handleSubmit}
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              )}
+            <div className="flex items-center space-x-4">
+              <div className="bg-blue-100 p-3 rounded-full">
+                <Mail className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900">Email</p>
+                <p className="text-gray-600">serena@blakepsychology.com</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="bg-blue-100 p-3 rounded-full">
+                <MapPin className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900">Address</p>
+                <p className="text-gray-600">1287 Maplewood Drive<br />Los Angeles, CA 90026</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-     </SectionWrapper>
+
+        <div className="bg-white rounded-xl p-6 shadow-lg">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Office Hours</h3>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <Clock className="w-5 h-5 text-gray-400" />
+              <div>
+                <p className="font-semibold text-gray-900">In-person</p>
+                <p className="text-gray-600">Tue & Thu, 10 AM–6 PM</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Calendar className="w-5 h-5 text-gray-400" />
+              <div>
+                <p className="font-semibold text-gray-900">Virtual (Zoom)</p>
+                <p className="text-gray-600">Mon, Wed & Fri, 1 PM–5 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="bg-white rounded-xl p-6 shadow-lg">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+
+        {isSubmitted ? (
+          <div className="text-center py-8">
+            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+            <h4 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h4>
+            <p className="text-gray-600">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+          </div>
+        ) : (
+          <div className="space-y-6">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
+              <input
+                type="text"
+                value={formData.name}
+                onChange={(e) => handleInputChange('name', e.target.value)}
+                className={`w-full px-4 py-3 border rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
+                  formErrors.name ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="Your full name"
+              />
+              {formErrors.name && <p className="text-red-500 text-sm mt-1">{formErrors.name}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Phone *</label>
+              <input
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => handleInputChange('phone', e.target.value)}
+                className={`w-full px-4 py-3 border rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
+                  formErrors.phone ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="Your phone number"
+              />
+              {formErrors.phone && <p className="text-red-500 text-sm mt-1">{formErrors.phone}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={(e) => handleInputChange('email', e.target.value)}
+                className={`w-full px-4 py-3 border rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
+                  formErrors.email ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="your.email@example.com"
+              />
+              {formErrors.email && <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">What brings you here? *</label>
+              <textarea
+                value={formData.message}
+                onChange={(e) => handleInputChange('message', e.target.value)}
+                rows={4}
+                className={`w-full px-4 py-3 border rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
+                  formErrors.message ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="Tell me a bit about what you're looking for support with..."
+              />
+              {formErrors.message && <p className="text-red-500 text-sm mt-1">{formErrors.message}</p>}
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Preferred time to reach you *</label>
+              <input
+                type="text"
+                value={formData.preferredTime}
+                onChange={(e) => handleInputChange('preferredTime', e.target.value)}
+                className={`w-full px-4 py-3 border rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
+                  formErrors.preferredTime ? 'border-red-500' : 'border-gray-300'
+                }`}
+                placeholder="e.g., Weekday mornings, Tuesday evenings, etc."
+              />
+              {formErrors.preferredTime && <p className="text-red-500 text-sm mt-1">{formErrors.preferredTime}</p>}
+            </div>
+
+            <div>
+              <label className="flex items-center space-x-3">
+                <input
+                  type="checkbox"
+                  checked={formData.agreeToContact}
+                  onChange={(e) => handleInputChange('agreeToContact', e.target.checked)}
+                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                />
+                <span className="text-sm text-gray-700">I agree to be contacted *</span>
+              </label>
+              {formErrors.agreeToContact && <p className="text-red-500 text-sm mt-1">{formErrors.agreeToContact}</p>}
+            </div>
+
+            <button
+              type="button"
+              onClick={handleSubmit}
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            >
+              Send Message
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* Footer */}
       <footer className="bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-sm text-gray-700 py-12">
   <div className="max-w-6xl mx-auto px-4">
